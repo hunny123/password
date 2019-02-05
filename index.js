@@ -37,7 +37,7 @@ app.use(bodyParser.urlencoded({
 
 app.use(bodyParser.json());
 
-app.post("/", function (req, res) {
+app.post("/password", function (req, res) {
      length = req.body.user.name
      le1 = "l"+length;
      copy = "show";
