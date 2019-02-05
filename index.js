@@ -22,7 +22,9 @@ var length=0;
 var copy ="hide";
 var status="Generate";
 app.get('/',function(req,res){
-
+    length=0; 
+    copy ="hide";
+    status="Generate";
     res.render('index.ejs',{name:pass,length:length,copy:copy,status:status});
 });
 app.engine('html', require('ejs').renderFile);
