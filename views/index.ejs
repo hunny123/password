@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Random Password Generator</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+<script>
+	function copy(){
+	var text = document.getElementById("myInput").innerText;
+    var elem = document.createElement("textarea");
+    document.body.appendChild(elem);
+    elem.value = text;
+    elem.select();
+    document.execCommand("copy");
+    document.body.removeChild(elem);
+	
+  };</script>
+  <style>
+  .hide{
+	  display:none;
+  }
+  .show{
+	  display: block;
+	  
+  }
+  
+  </style>
+</head>
+<body class="bg-light">
+
+	<h1 class="text-center text-white py-2 bg-primary">Random Password Generator</h1>
+	      <div class="container my-">
+		  <div class="row">
+			  <div class="col-lg-3"></div>
+		       <div class="col-lg-6">
+			<h1> Just  Fill Length and Generate Password</h1>
+		   <form  class="form" method="post" action="/">
+			<div class="form-group">
+			<label for="number" class="mr-3">Length: </label>
+			<input  class="form-control" type="number" min='5' max='10' name="user[name]" placeholder="Fill the length from 5-10" required  value=<%=length%>  >
+			</div>
+			
+			<button class="btn btn-primary" type="submit"><%=status%></button>
+			
+		</form>	
+		<button  class=" <%=copy%> btn btn-primary float-right "onclick= "copy()">Copy</button>
+		
+		<p class="bg-white  <%=copy%> text-dark p-2 my-2 "id="myInput" style="width:150px" ><b><%=name%></b></p>
+	   </div>
+	   <div class="col-lg-3">
+
+	   </div>
+       </div>
+
+		
+	
+	
+
+
+
+</div>	
+</body>
+</html>
